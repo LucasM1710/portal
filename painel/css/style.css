@@ -1,0 +1,1216 @@
+
+
+/*tela de login atualizada 03/05/2023*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'Open Sans';
+  }
+  
+  body {
+	background-color: #f2f2f2;
+	overflow-x: hidden;
+  }
+  
+
+/*Responsivo*/
+
+/*Final responsivo*/
+/*Final da tela de login*/
+
+
+.mobile{
+	display: none;
+}
+.mobile2{
+	display: none;
+}
+
+.pastasedit a{
+	color:#045a88; 
+}
+.pastasedit a:hover{
+	color: #00aeef;
+	transition-duration: 1.5s; 
+}
+.btn-arquivo a{
+	font-size: 25px;
+}
+
+.position{
+	position: relative;
+	left: 13%;
+	top:100px;
+
+}
+
+.box-arquivo{
+	width: 20%;
+	height:20%;
+	background: #045a88;
+	margin:50px;
+	position: relative;
+	float:left;
+	left:120px;
+	box-shadow: 7px 7px 2.5px rgb(136 136 136/0.2) ;
+	
+}
+.box-arquivo h1{
+	position: relative;
+	bottom: 30px;
+	color:white;
+	text-align: center;
+}
+
+.box-arquivo h3{
+	position: relative;
+	bottom: 30px;
+	color:white;
+	text-align: center;
+	font-size: 25px;
+	margin: 5px;
+}
+
+.box-pastas{
+	width: 20%;
+	height:20%;
+	background: #00aeef;
+	margin:50px;
+	position: relative;
+	float:left;
+	left:120px;
+	box-shadow: 7px 7px 2.5px rgb(136 136 136/0.2) ;
+	
+}
+.box-pastas h1{
+	position: relative;
+	bottom: 30px;
+	color:white;
+	text-align: center;
+}
+
+.box-pastas h3{
+	position: relative;
+	bottom: 30px;
+	color:white;
+	text-align: center;
+	font-size: 25px;
+	margin: 5px;
+}
+
+.logo{
+	width: 30%;
+	float: left;
+}
+.logo svg{
+	position: relative;
+	width: 120px;
+	height: 80px;
+	bottom: 20px;
+	left: 60px;
+}
+.logo2 svg{
+	position: relative;
+	width: 120px;
+	height: 80px;
+	bottom: 20px;
+	left: 60px;
+	display: none;
+}
+
+
+
+
+.menu-topo{
+	float: left;
+	position: relative;
+	right:50%;
+}
+.logado{
+	float: left;
+	position: relative;
+	right:65%;
+}
+.logado h4{
+
+	color:white;
+}
+.logado2{
+	float: left;
+	position: relative;
+	right:65%;
+}
+.logado2 h4{
+
+	color:white;
+}
+
+
+.botao-add a{
+	background: #00aeef;
+	/*background-image: linear-gradient(to right,#0091ea , #00284f);*/
+	font-size: 20px; 
+	padding:  10px; 
+	color:white; 
+	text-decoration: none;
+}
+.botao-add a:hover{
+	background: #045a88;
+	transition-duration: 1.5s;
+}
+
+.botao-add-tipo a{
+	/*background-image: linear-gradient(to right,#0091ea , #00284f);*/
+	font-size: 19px; 
+	color:#045a88; 
+	text-decoration: none;
+	margin: 10px;
+}
+
+
+.botao-add-tipo a:hover{
+	/*background-image: linear-gradient(to right,#0091ea , #00284f);*/
+	font-size: 21px; 
+	color:#00aeef; 
+	transition-duration: 1.2s;
+	
+}
+.botao-add-tipo a:hover::before{
+	font-family: 'Font Awesome\ 5 Free';
+	content: "\f061		";
+	font-weight: 900;
+
+}
+
+
+
+
+.botao-adds a{
+	background: #fa9d23;
+	/*background-image: linear-gradient(to right,#0091ea , #00284f);*/
+	font-size: 20px; 
+	padding:  10px; 
+	color:white; 
+	text-decoration: none;
+	position: relative;
+	float: left;
+	margin: 0px;
+}
+
+/*-----------------------------*/
+
+
+/*Página de login*/
+
+
+
+/*Box erro do painel*/
+
+.erro-box{
+	width: 100%;
+	padding: 8px 2%;
+	text-align: center;
+	background: #F75353;
+	color: white;
+	font-size: 15px;
+	font-family: Verdana, Geneva, sans-serif;
+
+}
+
+/*Fim página login*
+
+/*Painel de controle*/
+
+.clear{clear:both;}
+
+.center{padding:0 2%;margin:0 auto;}
+
+
+
+.loggout{
+	float: right;
+}
+
+.loggout a{
+	padding: 0 30px;
+	position: relative;
+	top: 4px;
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+}
+
+.loggout a > span{
+	font-size: 14px;
+	text-decoration: none;
+	font-family: Verdana, Geneva, sans-serif;
+}
+.loggout a:hover{
+	color: #00aeef;
+	transition-duration: 1.5s;
+}
+
+.menu-btn{
+	float: left;
+	cursor: pointer;
+	font-size: 23px;
+	color: white;
+}
+
+
+.menu-wraper{width:250px;}
+
+
+
+div.menu{
+	overflow-x:hidden;
+	overflow-y: auto;
+	height: 100%;
+	padding:150px 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: white;
+	float: left;
+	width: 250px;
+}
+
+
+
+header{
+	position: fixed;
+	padding: 15px 0;
+	background-color: #045a88; 
+	width: 100%;
+	height: 70px;
+	z-index: 3;
+}
+
+.content{
+	width: calc(100% - 250px);
+	position: relative;
+	left: 250px;
+	padding: 2%;
+}
+
+
+
+.items-menu{
+	margin-top: 50px;
+}
+
+
+.items-menu a{
+	display: block;
+	padding: 15px;
+	font-weight: 700;
+	font-size: 16px;
+	text-decoration: none;
+	color: #045a88;
+	
+}
+
+.items-menu2 a{
+	display: block;
+	padding: 15px;
+	font-weight: 700;
+	font-size: 16px;
+	text-decoration: none;
+	color: #045a88;
+}
+
+
+
+
+
+/*Conteúdo principal do painel*/
+
+.w100{
+	width: 100%;
+}
+
+.w50{
+	width: 49%;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.box-content{
+	background: white;
+	padding: 100px;
+	position: relative;
+	top:-2px;
+	margin-bottom: 20px;
+}
+
+.box-content h2{
+	font-weight: 300;
+	font-size: 23px;
+}
+
+
+/*Tabelas*/
+
+.wraper-table{
+	overflow-x: auto;
+}
+
+table{
+	font-weight: 300;
+	min-width: 900px;
+	margin:20px 0;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table tr:nth-of-type(1){
+	background: #045a88;
+	color: white;
+}
+
+table tr{
+	border-bottom: 1px solid #ccc;
+}
+
+table tr{
+	color: #555;
+}
+
+table td{
+	padding: 6px;
+}
+td a{
+	color:#045a88;
+}
+td a:hover{
+	color: #00aeef;
+	transition-duration: 1.5s;
+}
+
+
+table a.btn{
+	font-weight: normal;
+	font-size: 13px;
+	color: white;
+	text-decoration: none;
+	padding: 4px 6px;
+}
+
+a.btn.edit{background: #F4B03E;}
+a.btn.delete{background: #E05C4E;}
+a.btn.order{background: #0091ea;}
+
+
+/*Paginacao*/
+
+.paginacao{
+	margin:20px 0;
+	text-align: center;
+}
+
+.paginacao a{
+	font-size: 14px;
+	margin:0 8px;
+	display: inline-block;
+	padding: 3px 4px;
+	border: 1px solid #ccc;
+	text-decoration: none;
+	color: #666;
+}
+
+.paginacao a.page-selected{
+	background: rgb(220,220,220);
+}
+/*Box Metricas*/
+
+.box-metricas{
+	margin-top:16px;
+	padding:0 15px;
+}
+
+.box-metrica-single{
+	float: left;
+	position: relative;
+	width: 33.3%;
+	background: #F4B03E;
+	border: 5px solid white;
+}
+
+.box-metricas .box-metrica-single:nth-of-type(2){
+	background: #E05C4E;
+}
+
+.box-metricas .box-metrica-single:nth-of-type(3){
+	background: #0091ea;
+}
+
+.box-metrica-wraper{
+	padding: 10px 20px;
+	text-align: left;
+	color: white;
+}
+
+.box-metrica-wraper h2{
+	font-size: 28px;
+}
+
+.box-metrica-wraper p{
+	padding: 10px 0;
+	font-size: 26px;
+}
+
+/*Tabela Responsiva*/
+
+.table-responsive{
+	margin:20px auto;
+	font-weight: 300;
+}
+
+.table-responsive .row:nth-of-type(1){
+	font-weight: normal;
+	background: #00bfa5;
+	padding: 10px;
+	color: white;
+}
+
+.table-responsive .row{
+	color: #777;
+	padding: 8px;
+	border-bottom: 1px solid #ccc;
+}
+
+.col{
+	float: left;
+	width: 50%;
+}
+
+
+/*Formulários de contato do box-content*/
+
+.box-content form{
+	margin:30px 0;
+}
+
+.box-content form label{
+	font-size: 17px;
+	font-weight: 300;
+	color: black;
+	display: block;
+}
+
+.box-content .form-group{
+	margin:15px 0;
+}
+
+.box-content form input[type=text],
+.box-content form input[type=email],
+.box-content form input[type=password]
+{
+	margin-top:8px;
+	font-size: 16px;
+	font-weight: normal;
+	color: black;
+	width: 100%;
+	height: 40px;
+	border: 1px solid #ccc;
+	padding-left: 8px;
+}
+
+.box-content form textarea{
+	margin-top:8px;
+	font-size: 16px;
+	font-weight: normal;
+	color: black;
+	width: 100%;
+	height: 150px;
+	border: 1px solid #ccc;
+	padding: 8px;
+	resize: vertical;
+}
+
+.box-content form select{
+	margin-top:8px;
+	font-size: 16px;
+	font-weight: normal;
+	color: black;
+	width: 100%;
+	height: 40px;
+	border: 1px solid #ccc;
+	padding-left: 8px;
+}
+
+.box-content form input[type=file]{
+	margin-top:8px;
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;	
+}
+
+.box-content form input[type=submit]{
+	width: auto;
+	height: 40px;
+	padding: 3px 8px;
+	cursor: pointer;
+	margin-top: 10px;
+	font-size: 16px;
+	background: #00bfa5;
+	color: white;
+	border: 0;
+}
+
+/*Box de alerta!*/
+
+.box-alert{
+	width: 100%;
+	padding:8px 0;
+	text-align: center;
+}
+
+.sucesso{
+	background: #3ba867;
+	color: white;
+}
+
+.erro{
+	background: #F75353;
+	color: white;
+}
+
+/*Menu selecionado*/
+.menu-active{
+	background: #00aeef;
+}
+
+.menu-active::before{
+	/*
+		Adicionar Seta para qd estiver selecionado.
+	*/
+
+	content: '> ' ;
+}
+
+.adicionar-arquivo .menu-active::before{
+	display: none;
+}
+.voltar .menu-active::before{
+	display: none;
+}
+.voltar .menu-active{
+	background: white;
+}
+
+
+
+.form-group-login label{
+	font-size: 13px;
+	padding-right: 6px;
+	font-weight: 300;
+	color: black;
+}
+
+form .form-group-login:nth-of-type(2){
+	position: relative;
+	top: 10px;
+}
+
+.boxes{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.box-single-wraper{
+	width: 33.3%;
+	padding: 20px;
+}
+
+.box-single{
+	overflow-x: auto;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+}
+
+.topo-box{
+	text-align: center;
+	color: #ccc;
+	padding: 8px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.topo-box img{
+	display: block;
+	max-width: 150px;
+	margin: 0 auto;
+}
+
+.topo-box h2{
+	font-size: 36px;
+}
+
+.body-box{
+	padding: 10px;
+}
+
+
+.body-box p{
+	color: #646464;
+	font-size: 15px;
+	margin-bottom: 8px;
+}
+
+.group-btn a{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	padding: 3px 8px;
+}
+
+.group-btn{margin-top: 15px;}
+
+.busca{
+	position: relative;
+	margin: 50px 0;
+	width: 100%;
+	padding: 50px 100px;
+	background: #045a88;
+}
+
+.busca form{
+	margin: 0;
+	width: 70%;
+	position: relative;
+	left: 80px;
+}
+.busca form input[type=submit]{
+	background: #fa9d23;
+	width: 20%; 
+	position: relative; 
+	bottom: 50px; 
+	float: right; 
+	left:250px; 
+	font-weight: bold;
+}
+
+
+
+
+.busca h4{
+	font-weight: lighter;
+	font-size: 23px;
+	color: white;
+	position: relative;
+	left: 80px;
+}
+
+.busca-result{
+	color:#646464;
+	border-top: 3px solid #ccc;
+}
+
+.busca-result p{
+	font-size: 16px;
+}
+
+@media screen and (max-width: 1440px){
+
+
+	.box-content{
+	background: white;
+	padding: 100px 20px;
+	position: relative;
+	top:-2px;
+	margin-bottom: 20px;
+}
+.busca form{
+	margin: 0;
+	width: 100%;
+	position: relative;
+	left: -50px;
+}
+
+.busca h4{
+	font-weight: lighter;
+	font-size: 23px;
+	color: white;
+	position: relative;
+	left: -50px;
+}
+.busca form input[type=submit]{
+	background: #fa9d23;
+	width: 15%; 
+	position: relative; 
+	bottom: 50px; 
+	float: right; 
+	left:130px; 
+	font-weight: bold;
+}
+.menu-topo{
+	position: relative;
+	right: 100px;
+}
+
+.logado{
+	position: relative;
+	right: 180px;
+	top:8px;
+}
+
+
+.box-arquivo{
+	width: 60%;
+	height:20%;
+	background: #045a88;
+	margin:50px;
+	position: relative;
+	float:left;
+	left: 45px;
+	bottom: 45px;
+	box-shadow: 10px 10px 5px #888888;
+	
+	}
+
+	.box-pastas{
+	width: 60%;
+	height:20%;
+	background: #00aeef;
+	margin:50px;
+	position: relative;
+	float:left;
+	left:45px;
+	bottom:130px;
+	box-shadow: 10px 10px 5px #888888;
+	
+	}
+
+@media screen and (max-width: 1200px){
+	.box-metrica-single{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1024px){
+	.box-single-wraper{
+		width: 100%;
+		min-height: 0;
+	}
+
+	.box-metrica-single{
+		width: 100%;
+		height: auto;
+	}
+		.content{
+		width: 100%;
+		left: 0;
+	}
+
+	header{
+		left: 0;
+		width: 100%;
+		display: block;
+		height: 75px;
+		
+	}
+	nav.mobile{
+		display: block;
+	}
+
+	.botao-menu-mobile{
+		font-size: 24px;
+		position: relative;
+		left: -30px;
+		cursor: pointer;
+		color: white;
+		top:5px;
+	}
+
+	nav.mobile ul{
+		top:70px;
+		z-index: 3;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		display: none;
+		text-align: center;
+	}
+
+	nav.mobile li{
+		font-weight: 300;
+		width: 100%;
+		display: block;
+		background: white;
+		border-bottom:1px solid #ccc;
+		font-size: 17px;
+		padding:13px 0;
+	}
+	nav.mobile li a{
+		display: block;
+		color: #444;
+		text-decoration: none;
+	}
+	nav.mobile2{
+		display: block;
+	}
+
+	.botao-menu-mobile2{
+		font-size: 24px;
+		position: relative;
+		left: -30px;
+		cursor: pointer;
+		color: white;
+	}
+
+	nav.mobile2 ul{
+		top:70px;
+		z-index: 3;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		display: none;
+		text-align: center;
+	}
+
+	nav.mobile2 li{
+		font-weight: 300;
+		width: 100%;
+		display: block;
+		background: white;
+		border-bottom:1px solid #ccc;
+		font-size: 17px;
+		padding:13px 0;
+	}
+	nav.mobile2 li a{
+		display: block;
+		color: #444;
+		text-decoration: none;
+	}
+
+	.items-menu{
+		display: none;
+	}
+	.menu{
+		display: none;
+	}
+	.items-menu2{
+		display: none;
+	}
+	.menu-topo{
+		display: none;
+	}
+	.loggout{
+		display: none;
+	}
+	.logo2 svg{
+		display: block;
+		width: 8%;
+		height:8%;
+		position:relative;
+		bottom:1px;
+		left: 20px;
+	}
+	/*Pagina inicial*/
+	.position{
+	position: relative;
+	left: 3%;
+	top:100px;
+
+	}
+
+	.box-arquivo{
+	width: 60%;
+	height:20%;
+	background: #045a88;
+	margin:50px;
+	position: relative;
+	float:left;
+	left: 100px;
+	bottom: 45px;
+	box-shadow: 10px 10px 5px #888888;
+	
+	}
+
+	.box-pastas{
+	width: 60%;
+	height:20%;
+	background: #00aeef;
+	margin:50px;
+	position: relative;
+	float:left;
+	left:100px;
+	bottom:80px;
+	box-shadow: 10px 10px 5px #888888;
+	
+	}
+.box-content{
+	background: white;
+	padding: 100px 20px;
+	position: relative;
+	top:-2px;
+	margin-bottom: 20px;
+}
+.busca form{
+	margin: 0;
+	width: 100%;
+	position: relative;
+	left: -50px;
+}
+
+.busca h4{
+	font-weight: lighter;
+	font-size: 23px;
+	color: white;
+	position: relative;
+	left: -50px;
+}
+.busca form input[type=submit]{
+	background: #fa9d23;
+	width: 25%; 
+	position: relative; 
+	bottom: 50px; 
+	float: right; 
+	left:100px; 
+	font-weight: bold;
+}
+
+
+.nome-user h2{
+	display: none;
+}
+
+	nav.mobile h5{
+		color:white;
+		position: relative;
+		top:-5px;
+		left: -18px;
+	}
+
+	nav.mobile2 h5{
+		color:white;
+		position: relative;
+		top:0px;
+		left: 10px;
+	}
+}
+
+
+@media screen and (max-width: 768px){
+	.content{
+		width: 100%;
+		left: 0;
+	}
+
+	header{
+		left: 0;
+		width: 100%;
+		display: block;
+		height: 75px;
+		
+	}
+	nav.mobile{
+		display: block;
+	}
+
+	.logado{
+		color:white;
+		position: relative;
+		top:8px;
+		left:-30px;
+	}
+
+	.botao-menu-mobile{
+		font-size: 24px;
+		position: relative;
+		left: -18px;
+		cursor: pointer;
+		color: white;
+	}
+
+	nav.mobile ul{
+		top:70px;
+		z-index: 3;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		display: none;
+		text-align: center;
+	}
+
+	nav.mobile li{
+		font-weight: 300;
+		width: 100%;
+		display: block;
+		background: white;
+		border-bottom:1px solid #ccc;
+		font-size: 17px;
+		padding:13px 0;
+	}
+	nav.mobile li a{
+		display: block;
+		color: #444;
+		text-decoration: none;
+	}
+	nav.mobile h5{
+		color:white;
+		position: relative;
+		top:-5px;
+		left:-7px;
+	}
+
+
+
+	nav.mobile2{
+		display: block;
+	}
+
+	.logado{
+		color:white;
+		position: relative;
+		top:8px;
+		left:-30px;
+	}
+
+	.botao-menu-mobile2{
+		font-size: 24px;
+		position: relative;
+		left: -18px;
+		cursor: pointer;
+		color: white;
+	}
+
+	nav.mobile2 ul{
+		top:70px;
+		z-index: 3;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		display: none;
+		text-align: center;
+	}
+
+	nav.mobile2 li{
+		font-weight: 300;
+		width: 100%;
+		display: block;
+		background: white;
+		border-bottom:1px solid #ccc;
+		font-size: 17px;
+		padding:13px 0;
+	}
+	nav.mobile2 li a{
+		display: block;
+		color: #444;
+		text-decoration: none;
+	}
+	nav.mobile2 h5{
+		color:white;
+		position: relative;
+		top:-5px;
+		left:-7px;
+	}
+
+	.items-menu{
+		display: none;
+	}
+	.menu{
+		display: none;
+	}
+	.items-menu2{
+		display: none;
+	}
+	.menu-topo{
+		display: none;
+	}
+	.loggout{
+		display: none;
+	}
+	.logo2 svg{
+		display: block;
+		width: 16.5%;
+		height:16.5%;
+		position:relative;
+		bottom:2px;
+		left: 20px;
+	}
+	/*Pagina inicial*/
+	.position{
+	position: relative;
+	left: 3%;
+	top:100px;
+
+	}
+
+	.box-arquivo{
+	width: 60%;
+	height:20%;
+	background: #045a88;
+	margin:50px;
+	position: relative;
+	float:left;
+	left: 8px;
+	bottom: 55px;
+	box-shadow: 10px 10px 5px #888888;
+	
+	}
+
+	.box-pastas{
+	width: 60%;
+	height:20%;
+	background: #00aeef;
+	margin:50px;
+	position: relative;
+	float:left;
+	left:8px;
+	bottom:125px;
+	box-shadow: 10px 10px 5px #888888;
+	
+	}
+	.box-content{
+	background: white;
+	padding: 100px 2px;
+	position: relative;
+	top:-2px;
+	margin-bottom: 20px;
+}
+.busca{
+	padding: 50px 60px;
+}
+.busca form{
+	margin: 0;
+	width: 100%;
+	position: relative;
+	left: -50px;
+}
+
+.busca h4{
+	font-weight: lighter;
+	font-size: 23px;
+	color: white;
+	position: relative;
+	left: -50px;
+}
+.busca form input[type=submit]{
+	background: #fa9d23;
+	width: 30%; 
+	position: relative; 
+	bottom: 50px; 
+	float: right; 
+	left:100px; 
+	font-weight: bold;
+}
+.busca form input[placeholder]{
+	font-size: 12px;
+}
+
+.nome-user h2{
+	display: none;
+}
+
+}
+
+}
