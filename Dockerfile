@@ -34,10 +34,6 @@ RUN composer install --no-interaction --no-plugins --no-scripts
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 ENV APACHE_LOG_DIR /var/log/apache2
 
-# Configurações adicionais do Apache (se necessário)
-RUN a2enmod rewrite
-COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
-
 # Expõe a porta utilizada pelo Apache
 EXPOSE 80
 
