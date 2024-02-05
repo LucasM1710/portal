@@ -19,7 +19,7 @@
 		};
 		spl_autoload_register($autoload);
 
-	define('INCLUDE_PATH','http://217.196.62.185:8031/');
+	define('INCLUDE_PATH','https://certificados.eranalitica.com.br/');
 	define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
 
 	define('BASE_DIR_PAINEL',__DIR__.'/painel');
@@ -27,9 +27,9 @@
 
 	//Conectar com banco de dados!
 	define('HOST','localhost');
-	define('USER','root');
-	define('PASSWORD','feimues7moog6os2aihaishaec2Bietu');
-	define('DATABASE','certificados');
+	define('USER','eranal48_root');
+	define('PASSWORD','Certificados2020');
+	define('DATABASE','eranal48_certificados');
 
 	//Constantes para o painel de controle
 	define('NOME_EMPRESA','Lpaynnel');
