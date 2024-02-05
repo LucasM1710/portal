@@ -26,7 +26,7 @@
 
 
 	//Conectar com banco de dados!
-	define('HOST','localhost:3306');
+	define('HOST','217.196.62.185:8031');
 	define('USER','root');
 	define('PASSWORD','feimues7moog6os2aihaishaec2Bietu');
 	define('DATABASE','certificados');
