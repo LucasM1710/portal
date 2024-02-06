@@ -26,10 +26,10 @@
 
 
 	//Conectar com banco de dados!
-	define('HOST','localhost');
-	define('USER','eranal48_root');
-	define('PASSWORD','Certificados2020');
-	define('DATABASE','eranal48_certificados');
+	define('HOST','cls3mrion001loyawxe5e33us');
+	define('USER','cls3mriom001aawoy3n5g7dtn');
+	define('PASSWORD','BAbgHu0RO0ftZ6hnobGWMmlD');
+	define('DATABASE','certificados');
 
 	//Constantes para o painel de controle
 	define('NOME_EMPRESA','Lpaynnel');
