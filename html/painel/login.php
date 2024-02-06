@@ -143,16 +143,16 @@
 			    } else if ($usuario[0]['Tipo'] == 1) {
 			        header("Location:main.php");
 			    }
-			    $secret = "6LecJcobAAAAAAPlzWykSTCB250IKca_HkofgzZL";
+			    /*descomentar $secret = "6LecJcobAAAAAAPlzWykSTCB250IKca_HkofgzZL";
 
 				$response = null;
 				$reCaptcha = new reCaptcha($secret);
 				if(isset($_POST['g-recaptcha-response'])){
            			$response = $reCaptcha->verifyResponse($_SERVER['REMOTE_ADDR'], $_POST['g-recaptcha-response']);
-        		}
+        		}*/
 
 				if($sql->rowCount()==1){
-					if($response != null && $response->success){
+					/*descomentarif($response != null && $response->success){*/
 
 
 					$info = $sql->fetch();
@@ -171,9 +171,9 @@
 						}
 						Painel::redirect(INCLUDE_PATH_PAINEL);
 
-        			}else{
+        			/*descomentar}else{
         				Painel::alert('erro',' Confirme que você não é um robô clicando no reCaptcha abaixo');
-        			}
+        			}*/
 					//header('Location: '.INCLUDE_PATH_PAINEL);
 					//die();
 			       
