@@ -72,9 +72,9 @@
 
 			}else{
 				if($_SESSION['tipo'] == 2){
-				include('pages/pagina-inicial.php');
+				include('painel/pages/pagina-inicial.php');
 			}else{
-				include('pages/area-cliente.php');
+				include('painel/pages/area-cliente.php');
 			}
 			}
 		}
