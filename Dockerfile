@@ -4,7 +4,7 @@ LABEL maintainer="Colin Wilson colin@wyveo.com"
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
-ENV NGINX_VERSION 1.20.0-1~bullseye
+ENV NGINX_VERSION 1.25.2-1~bullseye~bullseye
 ENV php_conf /etc/php/8.2/fpm/php.ini
 ENV fpm_conf /etc/php/8.2/fpm/pool.d/www.conf
 ENV COMPOSER_VERSION 2.5.8
