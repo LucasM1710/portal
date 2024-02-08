@@ -86,6 +86,15 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
+# Instalação do Apache e PHP
+RUN apt-get update \
+    && apt-get install -y apache2 php7.4 libapache2-mod-php7.4 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Ativação do módulo PHP no Apache
+RUN a2enmod php7.4
+
 # Supervisor config
 COPY ./supervisord.conf /etc/supervisord.conf
 
