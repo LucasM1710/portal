@@ -4,7 +4,6 @@ LABEL maintainer="Colin Wilson colin@wyveo.com"
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
-ENV NGINX_VERSION 1.21.6-1~bullseye
 ENV php_conf /etc/php/7.4/fpm/php.ini
 ENV fpm_conf /etc/php/7.4/fpm/pool.d/www.conf
 ENV COMPOSER_VERSION 2.0.13
@@ -14,20 +13,6 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
     && set -x \
     && apt-get update \
     && apt-get install --no-install-recommends $buildDeps --no-install-suggests -q -y gnupg2 dirmngr wget apt-transport-https lsb-release ca-certificates \
-    && \
-    NGINX_GPGKEY=573BFD6B3D8FBC641079A6ABABF5BD827BD9BF62; \
-          found=''; \
-          for server in \
-                  ha.pool.sks-keyservers.net \
-                  hkp://keyserver.ubuntu.com:80 \
-                  hkp://p80.pool.sks-keyservers.net:80 \
-                  pgp.mit.edu \
-          ; do \
-                  echo "Fetching GPG key $NGINX_GPGKEY from $server"; \
-                  apt-key adv --batch --keyserver "$server" --keyserver-options timeout=10 --recv-keys "$NGINX_GPGKEY" && found=yes && break; \
-          done; \
-    test -z "$found" && echo >&2 "error: failed to fetch GPG key $NGINX_GPGKEY" && exit 1; \
-    echo "deb http://nginx.org/packages/mainline/debian/ bullseye nginx" >> /etc/apt/sources.list \
     && wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
     && echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list \
     && apt-get update \
@@ -42,7 +27,8 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
             libmemcached-dev \
             libmemcached11 \
             libmagickwand-dev \
-            nginx=${NGINX_VERSION} \
+            apache2 \
+            php7.4 \
             php7.4-fpm \
             php7.4-cli \
             php7.4-bcmath \
@@ -66,7 +52,6 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
     && pip install supervisor \
     && pip install git+https://github.com/coderanger/supervisor-stdout \
     && echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d \
-    && rm -rf /etc/nginx/conf.d/default.conf \
     && sed -i -e "s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g" ${php_conf} \
     && sed -i -e "s/memory_limit\s*=\s*.*/memory_limit = 256M/g" ${php_conf} \
     && sed -i -e "s/upload_max_filesize\s*=\s*2M/upload_max_filesize = 100M/g" ${php_conf} \
@@ -79,8 +64,6 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
     && sed -i -e "s/pm.min_spare_servers = 1/pm.min_spare_servers = 2/g" ${fpm_conf} \
     && sed -i -e "s/pm.max_spare_servers = 3/pm.max_spare_servers = 4/g" ${fpm_conf} \
     && sed -i -e "s/pm.max_requests = 500/pm.max_requests = 200/g" ${fpm_conf} \
-    && sed -i -e "s/www-data/nginx/g" ${fpm_conf} \
-    && sed -i -e "s/^;clear_env = no$/clear_env = no/" ${fpm_conf} \
     && echo "extension=redis.so" > /etc/php/7.4/mods-available/redis.ini \
     && echo "extension=memcached.so" > /etc/php/7.4/mods-available/memcached.ini \
     && echo "extension=imagick.so" > /etc/php/7.4/mods-available/imagick.ini \
@@ -106,11 +89,8 @@ RUN buildDeps='curl gcc make autoconf libc-dev zlib1g-dev pkg-config' \
 # Supervisor config
 COPY ./supervisord.conf /etc/supervisord.conf
 
-# Override nginx's default config
-COPY ./default.conf /etc/nginx/conf.d/default.conf
-
-# Override default nginx welcome page
-COPY html /usr/share/nginx/
+# Override default apache configuration
+COPY ./apache.conf /etc/apache2/sites-available/000-default.conf
 
 # Copy Scripts
 COPY ./start.sh /start.sh
