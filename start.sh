@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Update nginx to match worker_processes to no. of cpu's
+# Update Apache to match number of CPU's
 procs=$(cat /proc/cpuinfo | grep processor | wc -l)
-sed -i -e "s/worker_processes  1/worker_processes $procs/" /etc/nginx/nginx.conf
+sed -i "s/StartServers          2/StartServers          $procs/" /etc/apache2/apache2.conf
 
 # Always chown webroot for better mounting
-chown -Rf nginx:nginx /usr/share/nginx/
+chown -Rf www-data:www-data /usr/share/apache2/
 
-# Start supervisord and services
-/usr/local/bin/supervisord -n -c /etc/supervisord.conf
+# Start Apache
+/usr/sbin/apache2ctl -D FOREGROUND
