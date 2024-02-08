@@ -8,4 +8,4 @@ sed -i "s/StartServers          2/StartServers          $procs/" /etc/apache2/ap
 chown -Rf www-data:www-data /usr/share/apache2/
 
 # Start Apache
-/usr/sbin/apache2ctl -D FOREGROUND
+/usr/sbin/apache2ctl -DFOREGROUND
