@@ -92,6 +92,9 @@ COPY ./supervisord.conf /etc/supervisord.conf
 # Override default apache configuration
 COPY ./apache.conf /etc/apache2/sites-available/000-default.conf
 
+# Copiar os arquivos do projeto para dentro do contêiner
+COPY ./html /var/www/html
+
 # Copy Scripts
 COPY ./start.sh /start.sh
 
