@@ -29,7 +29,7 @@
 	define('HOST','cls3mrion001loyawxe5e33us');
 	define('USER','cls3mriom001aawoy3n5g7dtn');
 	define('PASSWORD','BAbgHu0RO0ftZ6hnobGWMmlD');
-	define('DATABASE','certificados');
+	define('DATABASE','cls3mriom001bawoye2g007mn');
 
 	//Constantes para o painel de controle
 	define('NOME_EMPRESA','Lpaynnel');
