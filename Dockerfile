@@ -110,7 +110,7 @@ COPY ./supervisord.conf /etc/supervisord.conf
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 # Override default nginx welcome page
-COPY . /usr/share/nginx/
+COPY html /usr/share/nginx/html
 
 # Copy Scripts
 COPY ./start.sh /start.sh
