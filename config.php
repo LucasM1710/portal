@@ -26,7 +26,7 @@
 
 
 	//Conectar com banco de dados!
-	define('HOST','cls3mrion001loyawxe5e33us');
+	define('HOST','cls3mrion001loyawxe5e33us:3306');
 	define('USER','cls3mriol0019awoy0th576fj');
 	define('PASSWORD','4H6opNX4bZtS7dXyFfO9OFf2');
 	define('DATABASE','cls3mriom001bawoye2g007mn');
