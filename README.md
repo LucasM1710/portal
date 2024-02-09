@@ -42,5 +42,5 @@ $ sudo docker run -d wyveo/nginx-php-fpm:php82
 
 Default web root:
 ```
-/usr/share/nginx/html
+/usr/share/nginx/
 ```
