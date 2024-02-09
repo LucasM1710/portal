@@ -27,8 +27,8 @@
 
 	//Conectar com banco de dados!
 	define('HOST','cls3mrion001loyawxe5e33us');
-	define('USER','cls3mriom001aawoy3n5g7dtn');
-	define('PASSWORD','BAbgHu0RO0ftZ6hnobGWMmlD');
+	define('USER','cls3mriol0019awoy0th576fj');
+	define('PASSWORD','4H6opNX4bZtS7dXyFfO9OFf2');
 	define('DATABASE','cls3mriom001bawoye2g007mn');
 
 	//Constantes para o painel de controle
