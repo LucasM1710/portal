@@ -6,7 +6,7 @@
 	*/
 	session_start();
 	date_default_timezone_set('America/Sao_Paulo');
-	Sentry\init(['dsn' => 'http://e6308909af1d4585b9a386ec50b0792c@ermonitor.eranalitica.com.br/1' ]);
+	//Sentry\init(['dsn' => 'http://e6308909af1d4585b9a386ec50b0792c@ermonitor.eranalitica.com.br/1' ]);
 	
 		$autoload = function($class){
 		if($class == 'Email'){
