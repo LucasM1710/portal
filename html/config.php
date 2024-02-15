@@ -19,10 +19,10 @@
 		};
 		spl_autoload_register($autoload);
 
-	define('INCLUDE_PATH','http://217.196.62.185:8012/');
-	define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'/painel/');
+	define('INCLUDE_PATH','http://217.196.62.185:8012');
+	//define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
 
-	define('BASE_DIR_PAINEL',__DIR__.'/painel');
+	//define('BASE_DIR_PAINEL',__DIR__.'/painel');
 
 
 	//Conectar com banco de dados!
