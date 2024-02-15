@@ -62,8 +62,8 @@
 		public static function carregarPagina(){
 			if(isset($_GET['url'])){
 				$url=explode('/',$_GET['url']);
-				if(file_exists('painel/pages/'.$url[0].'.php')){
-					include('painel/pages/'.$url[0].'.php');
+				if(file_exists('pages/'.$url[0].'.php')){
+					include('pages/'.$url[0].'.php');
 				}else{
 
 					//Página não existe//
@@ -72,9 +72,9 @@
 
 			}else{
 				if($_SESSION['tipo'] == 2){
-				include('painel/pages/pagina-inicial.php');
+				include('pages/pagina-inicial.php');
 			}else{
-				include('painel/pages/area-cliente.php');
+				include('pages/area-cliente.php');
 			}
 			}
 		}
