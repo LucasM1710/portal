@@ -1,9 +1,3 @@
-<?php
-	if(isset($_GET['loggout'])){
-		Painel::loggout();
-	}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,9 +9,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/all.css" > 
+	<link rel="stylesheet" href="https://certificados.eranalitica.com.br/estilo/all.css" > 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zebra_datepicker@latest/dist/css/default/zebra_datepicker.min.css">
-	<link href="<?php echo INCLUDE_PATH_PAINEL?>css/style.css" rel="stylesheet"/>
+	<link href="https://certificados.eranalitica.com.br/painel/css/style.css" rel="stylesheet"/>
 	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="icon" href="../Img/logo3.png" type="image/x-icon" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -41,7 +35,7 @@
 
 
     
-	<base base="<?php echo INCLUDE_PATH_PAINEL; ?>"/>
+	<base base="https://certificados.eranalitica.com.br/painel/"/>
 	
 	<div class="menu">
 
@@ -53,15 +47,15 @@
 		<br/>
 		<div class ="items-menu">
 		    
-		    <a <?php selecionadoMenu('listar-pastas');?> href="<?php echo INCLUDE_PATH_PAINEL?>listar-pastas">Pastas</a>
-			<a <?php selecionadoMenu('listar-arquivos');?> href="<?php echo INCLUDE_PATH_PAINEL?>listar-arquivos">Arquivos</a>
-			<a <?php selecionadoMenu('listar-usuarios');?> href="<?php echo INCLUDE_PATH_PAINEL?>listar-usuarios">Usuários</a>
+		    <a  href="https://certificados.eranalitica.com.br/painel/listar-pastas">Pastas</a>
+			<a  href="https://certificados.eranalitica.com.br/painel/listar-arquivos">Arquivos</a>
+			<a  href="https://certificados.eranalitica.com.br/painel/listar-usuarios">Usuários</a>
 		
 		</div><!--items-menu-->
 		<div class ="items-menu2">
-			<a <?php selecionadoMenu('area-cliente');?> href="<?php echo INCLUDE_PATH_PAINEL?>area-cliente" style="font-weight:200 !important;">Área do cliente</a>
-			<a <?php selecionadoMenu('catalogo');?> href="<?php echo INCLUDE_PATH_PAINEL?>catalogo" style="font-weight:200 !important;">Nossos serviços</a>
-			<a <?php selecionadoMenu('curso');?> href="<?php echo INCLUDE_PATH_PAINEL?>curso">Curso gratuito para nossos clientes, confira.</a>
+			<a  href="https://certificados.eranalitica.com.br/painel/area-cliente" style="font-weight:200 !important;">Área do cliente</a>
+			<a  href="https://certificados.eranalitica.com.br/painel/catalogo" style="font-weight:200 !important;">Nossos serviços</a>
+			<a  href="https://certificados.eranalitica.com.br/painel/curso">Curso gratuito para nossos clientes, confira.</a>
 		</div>
 		</div><!--menu-wraper-->
 	</div><!--menu-->
@@ -75,15 +69,15 @@
 
 			<div class="loggout">
 			<div class="logado">
-				<h4>Olá, <?php echo $_SESSION['Nome']; ?></h4>
+				<h4>Olá, Lucas Matheus</h4>
 			</div>
 			<div class="menu-topo">
 				<a href="https://eranalitica.com.br/servicos" target="_blank">Serviços</a>
 				<a href="https://eranalitica.com.br/qualidade/" target="_blank">Qualidade</a>
 				<a href="https://eranalitica.com.br/contato/" target="_blank">Fale Conosco</a>
 			</div>
-				<a <?php if(@$_GET['url'] == ''){?> style = "padding:15px;"<?php }?> href="<?php echo INCLUDE_PATH_PAINEL?>"><i class="fa fa-home"></i> <span>Página Inicial</span></a>
-				<a href="<?php echo INCLUDE_PATH_PAINEL?>?loggout"><i class="fas fa-sign-out-alt"></i> <span>Sair </span></a>
+				<a  style = "padding:15px;" href="https://certificados.eranalitica.com.br/painel/"><i class="fa fa-home"></i> <span>Página Inicial</span></a>
+				<a href="https://certificados.eranalitica.com.br/painel/?loggout"><i class="fas fa-sign-out-alt"></i> <span>Sair </span></a>
 			</div><!--Loggout-->
 			</div>
 
@@ -105,14 +99,14 @@
 
 			 
 				<ul>
-					<li><a <?php if(@$_GET['url'] == ''){?> style = "padding:15px;"<?php }?> href="<?php echo INCLUDE_PATH_PAINEL?>"><i class="fa fa-home"></i> <span>Página Inicial</span></a></li>
+					<li><a  style = "padding:15px;" href="https://certificados.eranalitica.com.br/painel/"><i class="fa fa-home"></i> <span>Página Inicial</span></a></li>
 					<li><a href="https://eranalitica.com.br/servicos" target="_blank">Serviços</a></li>
 					<li><a href="https://eranalitica.com.br/qualidade/" target="_blank">Qualidade</a></li>
 					<li><a href="https://eranalitica.com.br/contato/" target="_blank">Fale Conosco</a></li>
-					<li><a <?php selecionadoMenu('listar-pastas');?> href="<?php echo INCLUDE_PATH_PAINEL?>listar-pastas">Pastas</a></li>
-					<li><a <?php selecionadoMenu('listar-arquivos');?> href="<?php echo INCLUDE_PATH_PAINEL?>listar-arquivos">Arquivos</a></li>
-					<li><a <?php selecionadoMenu('listar-usuarios');?> href="<?php echo INCLUDE_PATH_PAINEL?>listar-usuarios">Usuários</a></li>
-					<li><a href="<?php echo INCLUDE_PATH_PAINEL?>?loggout"><i class="fas fa-sign-out-alt"></i> <span>Sair </span></a></li>
+					<li><a  href="https://certificados.eranalitica.com.br/painel/listar-pastas">Pastas</a></li>
+					<li><a  href="https://certificados.eranalitica.com.br/painel/listar-arquivos">Arquivos</a></li>
+					<li><a  href="https://certificados.eranalitica.com.br/painel/listar-usuarios">Usuários</a></li>
+					<li><a href="https://certificados.eranalitica.com.br/painel/?loggout"><i class="fas fa-sign-out-alt"></i> <span>Sair </span></a></li>
 
 				</ul>
 				
@@ -135,14 +129,14 @@
 
 			 
 				<ul>
-					<li><a <?php if(@$_GET['url'] == ''){?> style = "padding:15px;"<?php }?> href="<?php echo INCLUDE_PATH_PAINEL?>"><i class="fa fa-home"></i> <span>Página Inicial</span></a></li>
+					<li><a  style = "padding:15px;" href="https://certificados.eranalitica.com.br/painel/"><i class="fa fa-home"></i> <span>Página Inicial</span></a></li>
 					<li><a href="https://eranalitica.com.br/servicos" target="_blank">Serviços</a></li>
 					<li><a href="https://eranalitica.com.br/qualidade/" target="_blank">Qualidade</a></li>
 					<li><a href="https://eranalitica.com.br/contato/" target="_blank">Fale Conosco</a></li>
-					<li><a <?php selecionadoMenu('area-cliente');?> href="<?php echo INCLUDE_PATH_PAINEL?>area-cliente">Área do cliente</a></li>
-					<li><a <?php selecionadoMenu('catalogo');?> href="<?php echo INCLUDE_PATH_PAINEL?>catalogo">Nossos serviços</a></li>
-					<li><a <?php selecionadoMenu('curso');?> href="<?php echo INCLUDE_PATH_PAINEL?>curso">Curso gratuito para nossos clientes, confira.</a></li>
-					<li><a href="<?php echo INCLUDE_PATH_PAINEL?>?loggout"><i class="fas fa-sign-out-alt"></i> <span>Sair </span></a></li>
+					<li><a  href="https://certificados.eranalitica.com.br/painel/area-cliente">Área do cliente</a></li>
+					<li><a  href="https://certificados.eranalitica.com.br/painel/catalogo">Nossos serviços</a></li>
+					<li><a  href="https://certificados.eranalitica.com.br/painel/curso">Curso gratuito para nossos clientes, confira.</a></li>
+					<li><a href="https://certificados.eranalitica.com.br/painel/?loggout"><i class="fas fa-sign-out-alt"></i> <span>Sair </span></a></li>
 
 				</ul>
 				
@@ -227,20 +221,53 @@
 
 	</header>
 	<div class="content">
-		<?php Painel::carregarPagina();?>
+		<style> .items-menu2 a{
+				display:none;
+				}
+				.nav mobile2 ul li a{
+					display:none;
+				}
+				.botao-menu-mobile2{
+					display:none;
+				}
+				.logado2{
+					display:none;
+				}
 
+
+				
+				</style><div class="position">
+		<div class="box-arquivo">
+			 			<br/>
+			<br/>
+			<br/>
+			<h1>Arquivos</h1>
+			<br/>
+			<br/>
+			<h3>13968 Arquivos</h3>			<h3>967 Pastas</h3>		</div>
+
+		<div class="box-pastas">
+			<br/>
+			<br/>
+			<br/>
+			<h1>Clientes</h1>
+			<br/>
+			<br/>
+			<h3>752 Clientes</h3>			<h3>8 Administradores</h3>		</div>
+
+</div>
 	</div><!--content-->
 	
-	<script src="<?php echo INCLUDE_PATH?>js/jquery.js"></script>
+	<script src="https://certificados.eranalitica.com.br/js/jquery.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/zebra_datepicker@latest/dist/zebra_datepicker.min.js"></script>
-	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/jquery.maskMoney.js"></script>
-	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/jquery.mask.js"></script>
-	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/jquery.ajaxform.js"></script>
-	<script src="<?php echo INCLUDE_PATH?>js/constants.js"></script>
-	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/main.js"></script>
+	<script src="https://certificados.eranalitica.com.br/painel/js/jquery.maskMoney.js"></script>
+	<script src="https://certificados.eranalitica.com.br/painel/js/jquery.mask.js"></script>
+	<script src="https://certificados.eranalitica.com.br/painel/js/jquery.ajaxform.js"></script>
+	<script src="https://certificados.eranalitica.com.br/js/constants.js"></script>
+	<script src="https://certificados.eranalitica.com.br/painel/js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
- 	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/helperMask.js"></script>
+ 	<script src="https://certificados.eranalitica.com.br/painel/js/helperMask.js"></script>
  	<script defer>
 		$(document).ready(function() {
 		    $('#pasta').select2();
