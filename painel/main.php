@@ -235,7 +235,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/zebra_datepicker@latest/dist/zebra_datepicker.min.js"></script>
 	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/jquery.maskMoney.js"></script>
 	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/jquery.mask.js"></script>
-	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/jquery.ajaxform.js"></script>
+	<!--<script src="<?php echo INCLUDE_PATH_PAINEL?>js/jquery.ajaxform.js"></script>-->
 	<script src="<?php echo INCLUDE_PATH?>js/constants.js"></script>
 	<script src="<?php echo INCLUDE_PATH_PAINEL?>js/main.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
