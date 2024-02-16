@@ -19,8 +19,8 @@
 					$_SESSION['Empresa']=$info['Empresa'];
 					$_SESSION['id']=$info['id'];
 					Painel::redirect(INCLUDE_PATH_PAINEL);
-					header('Location: '.INCLUDE_PATH_PAINEL);
-					die();
+					//header('Location: '.INCLUDE_PATH_PAINEL);
+					//die();
 			}
 	}
 
