@@ -4,11 +4,8 @@
 
 
 	*/
-	//require __DIR__ . '/vendor/autoload.php';
 	session_start();
 	date_default_timezone_set('America/Sao_Paulo');
-	
-	Sentry\init(['dsn' => 'http://e6308909af1d4585b9a386ec50b0792c@ermonitor.eranalitica.com.br/1' ]);
 	
 	
 		$autoload = function($class){
@@ -23,9 +20,9 @@
 		spl_autoload_register($autoload);
 
 	define('INCLUDE_PATH','http://217.196.62.185:8012/');
-	define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'html/painel/');
+	define('INCLUDE_PATH_PAINEL',INCLUDE_PATH.'painel/');
 
-	define('BASE_DIR_PAINEL',__DIR__.'html/painel');
+	define('BASE_DIR_PAINEL',__DIR__.'/painel');
 
 
 	//Conectar com banco de dados!
