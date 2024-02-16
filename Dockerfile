@@ -1,8 +1,8 @@
 FROM php:7.4
-COPY ./ var/www/html
+COPY ./ ./
 
 RUN docker-php-ext-install pdo_mysql
 
-WORKDIR /var/www/html/painel
+WORKDIR /painel
 EXPOSE 80
 CMD ["php", "-S", "0.0.0.0:80"]

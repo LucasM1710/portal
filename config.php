@@ -14,7 +14,7 @@
 			require("classes/PHPMailer-master/src/SMTP.php");
 			require("classes/PHPMailer-master/src/Exception.php");
 		}
-		include('classes/'.$class.'.php');
+		include(__DIR__ .'classes/'.$class.'.php');
 
 		};
 		spl_autoload_register($autoload);
