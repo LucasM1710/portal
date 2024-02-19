@@ -1,6 +1,6 @@
-    RewriteEngine On
-	RewriteCond %{SCRIPT_FILENAME} !-f
-	RewriteCond %{SCRIPT_FILENAME} !-d
-	RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
-
-	Options -Indexes
+server {
+    server_name portal.eranalitica.com.br;
+    location / {
+        try_files $uri $uri/ /index.php?url=$uri$is_args$args;
+    }
+}
