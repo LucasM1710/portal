@@ -1,4 +1,4 @@
-FROM php:7.4
+FROM php:7.3
 COPY ./ var/www
 
 RUN docker-php-ext-install pdo_mysql
