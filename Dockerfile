@@ -3,6 +3,6 @@ COPY ./ var/www
 
 RUN docker-php-ext-install pdo_mysql
 
-WORKDIR /var/www
+WORKDIR /var/www/painel
 EXPOSE 80
 CMD ["php", "-S", "0.0.0.0:80"]
