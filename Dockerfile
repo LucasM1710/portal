@@ -12,8 +12,8 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 
 RUN rm -f /etc/nginx/sites-enabled/*
 
-COPY /etc/nginx.conf /tmp/nginx.conf
-COPY /etc/php-fpm.conf /tmp/php-fpm.conf
+COPY /etc/nginx.conf /tmp/nginx.conf.tpl
+COPY /etc/php-fpm.conf /tmp/php-fpm.conf.tpl
 
 RUN mkdir -p /run/php && touch /run/php/php7.0-fpm.sock && touch /run/php/php7.0-fpm.pid
 
