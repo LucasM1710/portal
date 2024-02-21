@@ -17,7 +17,7 @@ COPY /etc/php-fpm.conf /tmp/php-fpm.conf.tpl
 
 RUN mkdir -p /run/php && touch /run/php/php7.0-fpm.sock && touch /run/php/php7.0-fpm.pid
 
-COPY /etc/entrypoint.sh /entrypoint.sh
+COPY /etc/entrypoint.sh /entrypoint.sh 
 RUN chmod 755 /entrypoint.sh
 
 EXPOSE 80
