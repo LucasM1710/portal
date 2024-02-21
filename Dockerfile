@@ -17,6 +17,7 @@ COPY /etc/php-fpm.conf /tmp/php-fpm.conf.tpl
 COPY /etc/php.ini /etc/php/7.0/fpm/
 
 RUN mkdir -p /run/php && touch /run/php/php7.0-fpm.sock && touch /run/php/php7.0-fpm.pid
+RUN mkdir /var/www/html/portal/uploads/logs
 
 COPY /etc/entrypoint.sh /entrypoint.sh 
 RUN chmod 755 /entrypoint.sh
